@@ -1,5 +1,25 @@
 const container = document.querySelector(".slider__list")
 const description = document.querySelector(".slider__text")
+const list = [
+  {
+    text: "ha-ha first description about sheep",
+  },
+  {
+    text: "random second giga chat",
+  },
+  {
+    text: "bubble-tea",
+  },
+  {
+    text: "cutie-pie",
+  },
+  {
+    text: "izvinite za mat",
+  },
+  {
+    text: "batya",
+  },
+]
 
 let currentIndex = 0
 let slides = []
@@ -13,7 +33,6 @@ function render() {
     }
   })
   container.style.transform = `translateX(-${offset}px)`
-
   description.textContent = list[currentIndex].text
 
   dots.forEach((dot, index) => {
@@ -24,9 +43,17 @@ function render() {
 }
 
 function goto(newIndex) {
-  if (newIndex < 0 || newIndex > slides.length - 1) return
+  if (newIndex < 0 || newIndex > slides.length - 1 || newIndex === currentIndex)
+    return
   currentIndex = newIndex
-
+  description.classList.add("text-animation")
+  description.addEventListener(
+    "animationend",
+    () => {
+      description.classList.remove("text-animation")
+    },
+    { once: true }
+  )
   render()
 }
 

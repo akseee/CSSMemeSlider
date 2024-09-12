@@ -2,6 +2,7 @@ body {
   color: white;
   font-family: sans-serif;
   background-color: #1d9bf0;
+  transition: all 1s ease-in-out;
 }
 
 h1 {
@@ -20,21 +21,31 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   width: max(70vw, 20em);
-  margin: 0 1em;
   margin: 0 auto;
   border-radius: 0.5em;
-  padding: 1em;
+  padding: 2em;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.159);
 }
 
 .slider__content {
-  display: flex;
+  flex: 1;
   grid-column: 1/ -1;
-  gap: 2em;
+  overflow: hidden;
+}
+
+.slider__list {
+  display: flex;
   height: 50vh;
   border-radius: 0.5em;
-  padding: 1em 0;
-  overflow: hidden;
+
+  transition: 250ms transform ease-in;
+}
+
+.slider__item {
+  min-width: 100%;
+  border-radius: 0.5em;
+  padding: 0.5em 0;
+  text-align: center;
   background-color: white;
 }
 
@@ -52,7 +63,7 @@ h1 {
   text-align: center;
 }
 
-.slider__dot-container {
+.slider__dot-item {
   padding: 0.5em;
 }
 
@@ -60,20 +71,77 @@ h1 {
   display: inline-block;
   width: 1em;
   height: 1em;
+  border: 3px solid transparent;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.25);
-  transition: background-color 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-.slider__dot-container:hover .slider__dot {
-  background-color: rgb(255, 255, 255);
+.slider__dot-item.active .slider__dot {
+  border: 3px solid #fff;
 }
 
-.slider__dot-container:hover {
+.slider__dot-item:hover .slider__dot {
+  background-color: #fff;
+}
+.slider__dot-item:active .slider__dot {
+  transform: scale(1.3);
+}
+
+.slider__dot-item:hover {
   cursor: pointer;
 }
 
 .slider__text {
   grid-column: 1/-2;
   grid-row: 2/3;
+  font-size: 1.3em;
+}
+
+.text-animation {
+  animation-name: text;
+  animation-duration: 1s;
+}
+
+@keyframes text {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 0.1;
+    transform: translateX(3em);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(5em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: red;
+    transition: all 2s ease-in-out;
+  }
+
+  .slider__container {
+    grid-template-columns: 1fr;
+  }
+
+  .slider__dots {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    justify-content: center;
+  }
+
+  .slider__text {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+  }
 }
