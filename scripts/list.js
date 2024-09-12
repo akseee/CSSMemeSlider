@@ -1,26 +1,20 @@
 const list = [
   {
-    text: "random image one",
-    path: "./assets/first.jpg",
+    text: "ha-ha first description about sheep",
   },
   {
-    text: "random image two",
-    path: "./assets/second.jpg",
+    text: "random second giga chat",
   },
   {
-    text: "random image 3",
-    path: "./assets/third.jpg",
+    text: "bubble-tea",
   },
   {
-    text: "random image четыре",
-    path: "./assets/fourth.jpg",
+    text: "cutie-pie",
   },
   {
-    text: "random image 2 наоборот (5)",
-    path: "./assets/fifth.jpg",
+    text: "izvinite za mat",
   },
   {
-    text: "random image 9 (наоборот)",
-    path: "./assets/sixth.jpg",
+    text: "batya",
   },
 ]
