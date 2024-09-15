@@ -11,5 +11,73 @@
   </head>
   <body>
     <h1>CSSMemeSlider</h1>
+    <div class="slider">
+      <div class="slider__content">
+        <input
+          class="visually-hidden"
+          type="radio"
+          name="slider"
+          id="slide1"
+          checked
+        />
+        <input class="visually-hidden" type="radio" name="slider" id="slide2" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide3" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide4" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide5" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide6" />
+        <div class="slider__gallery">
+          <div class="slider__list">
+            <label for="slide1" class="slider__item">
+              <img src="assets/first.jpg" alt="first" />
+            </label>
+            <label for="slide2" class="slider__item">
+              <img src="assets/second.jpg" alt="second" />
+            </label>
+            <label for="slide3" class="slider__item">
+              <img src="assets/third.jpg" alt="third" />
+            </label>
+            <label for="slide4" class="slider__item">
+              <img src="assets/foutrh.jpg" alt="fourth" />
+            </label>
+            <label for="slide5" class="slider__item">
+              <img src="assets/fifth.jpg" alt="fifth" />
+            </label>
+            <label for="slide6" class="slider__item">
+              <img src="assets/sixth.jpg" alt="sixth" />
+            </label>
+          </div>
+        </div>
+        <div class="slider__texts">
+          <div class="slider__texts-list">
+            <div class="slider__text">Happy sheep</div>
+            <div class="slider__text">Office</div>
+            <div class="slider__text">Babulya tea</div>
+            <div class="slider__text">Hamster 16s PRO</div>
+            <div class="slider__text">Izvinite za mats</div>
+            <div class="slider__text">Batya</div>
+          </div>
+        </div>
+        <div class="slider__pagination">
+          <label for="slide1" class="pagination-dot">
+            <span></span>
+          </label>
+          <label for="slide2" class="pagination-dot">
+            <span></span>
+          </label>
+          <label for="slide3" class="pagination-dot">
+            <span></span>
+          </label>
+          <label for="slide4" class="pagination-dot">
+            <span></span>
+          </label>
+          <label for="slide5" class="pagination-dot">
+            <span></span>
+          </label>
+          <label for="slide6" class="pagination-dot">
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
