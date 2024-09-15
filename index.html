@@ -11,54 +11,83 @@
   </head>
   <body>
     <h1>CSSMemeSlider</h1>
+
     <div class="slider">
-      <div class="slider__container">
-        <div class="slider__content">
-          <ul class="slider__list">
-            <li class="slider__item">
-              <img src="./assets/first.jpg" alt="some meme" />
-            </li>
-            <li class="slider__item">
-              <img src="./assets/second.jpg" alt="ha-ha joke" />
-            </li>
-            <li class="slider__item">
-              <img src="./assets/third.jpg" alt="hillarious" />
-            </li>
-            <li class="slider__item">
-              <img src="./assets/foutrh.jpg" alt="something cringe" />
-            </li>
-            <li class="slider__item">
-              <img src="./assets/fifth.jpg" alt="meme" />
-            </li>
-            <li class="slider__item">
-              <img src="./assets/sixth.jpg" alt="iconic" />
-            </li>
-          </ul>
+      <div class="slider__content">
+        <input
+          class="visually-hidden"
+          type="radio"
+          name="slider"
+          id="slide1"
+          checked
+        />
+        <input class="visually-hidden" type="radio" name="slider" id="slide2" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide3" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide4" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide5" />
+        <input class="visually-hidden" type="radio" name="slider" id="slide6" />
+
+        <div class="slider__gallery">
+          <div class="slider__list">
+            <label for="slide1" class="slider__item">
+              <img src="assets/first.jpg" alt="first" />
+            </label>
+            <label for="slide2" class="slider__item">
+              <img src="assets/second.jpg" alt="second" />
+            </label>
+            <label for="slide3" class="slider__item">
+              <img src="assets/third.jpg" alt="third" />
+            </label>
+            <label for="slide4" class="slider__item">
+              <img src="assets/foutrh.jpg" alt="fourth" />
+            </label>
+            <label for="slide5" class="slider__item">
+              <img src="assets/fifth.jpg" alt="fifth" />
+            </label>
+            <label for="slide6" class="slider__item">
+              <img src="assets/sixth.jpg" alt="sixth" />
+            </label>
+          </div>
         </div>
 
-        <ul class="slider__dots">
-          <li class="slider__dot-item active">
-            <span class="slider__dot" data-trigger-slider="1-slider"></span>
-          </li>
-          <li class="slider__dot-item">
-            <span class="slider__dot" data-trigger-slider="2-slider"></span>
-          </li>
-          <li class="slider__dot-item">
-            <span class="slider__dot" data-trigger-slider="3-slider"></span>
-          </li>
-          <li class="slider__dot-item">
-            <span class="slider__dot" data-trigger-slider="4-slider"></span>
-          </li>
-          <li class="slider__dot-item">
-            <span class="slider__dot" data-trigger-slider="5-slider"></span>
-          </li>
-          <li class="slider__dot-item">
-            <span class="slider__dot" data-trigger-slider="6-slider"></span>
-          </li>
-        </ul>
-        <div class="slider__text">ha-ha first description about sheep</div>
+        <div class="slider__texts">
+          <div class="slider__texts-list">
+            <div class="slider__text slider__text-1">Happy sheep</div>
+            <div class="slider__text slider__text-2">Office</div>
+            <div class="slider__text slider__text-3">Babulya tea</div>
+            <div class="slider__text slider__text-4">Hamster 16s PRO</div>
+            <div class="slider__text slider__text-5">Izvinite za mats</div>
+            <div class="slider__text slider__text-6">Batya</div>
+          </div>
+        </div>
+
+        <div class="slider__pagination">
+          <label for="slide1">
+            <input type="radio" name="slider" id="slide1" />
+            <span></span>
+          </label>
+          <label for="slide2">
+            <input type="radio" name="slider" id="slide2" />
+            <span></span>
+          </label>
+          <label for="slide3">
+            <input type="radio" name="slider" id="slide3" />
+            <span></span>
+          </label>
+          <label for="slide4">
+            <input type="radio" name="slider" id="slide4" />
+            <span></span>
+          </label>
+          <label for="slide5">
+            <input type="radio" name="slider" id="slide5" />
+            <span></span>
+          </label>
+          <label for="slide6">
+            <input type="radio" name="slider" id="slide6" />
+            <span></span>
+          </label>
+        </div>
       </div>
     </div>
-    <script src="/scripts/slider.js"></script>
   </body>
 </html>
