@@ -2,7 +2,7 @@ body {
   color: white;
   font-family: sans-serif;
   background-color: #1d9bf0;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 h1 {
@@ -120,37 +120,40 @@ h1 {
   cursor: pointer;
 }
 
-.slider__pagination input[type="radio"] {
-  display: none;
-}
-
 .slider__pagination span {
   display: block;
   width: 1.5em;
   height: 1.5em;
-  border: 3px solid transparent;
+  border: 5px solid transparent;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.25);
-  transition: background-color 0.3s, border-color 0.3s;
+  transition: all 0.5s ease-in-out;
 }
 
-/* input[type="radio"]:checked span {
-  background-color: #fff;
-} */
-
-input[type="radio"]:checked + span {
-  border: 3px solid white;
+.pagination-dot input {
+  background-color: red;
 }
 
-input[type="radio"]:hover + span {
-  background-color: #fff;
+.slider__pagination label:hover span {
+  background-color: #ffffff71;
 }
 
-input[type="radio"]:focus + span {
-  transform: scale(1.3);
+#slide1:checked ~ .slider__pagination label[for="slide1"] span,
+#slide2:checked ~ .slider__pagination label[for="slide2"] span,
+#slide3:checked ~ .slider__pagination label[for="slide3"] span,
+#slide4:checked ~ .slider__pagination label[for="slide4"] span,
+#slide5:checked ~ .slider__pagination label[for="slide5"] span,
+#slide6:checked ~ .slider__pagination label[for="slide6"] span {
+  border: 5px solid #ffffff;
 }
 
-input[type="radio"]:active + span {
+#slide1:active ~ .slider__pagination label[for="slide1"] span,
+#slide2:active ~ .slider__pagination label[for="slide2"] span,
+#slide3:active ~ .slider__pagination label[for="slide3"] span,
+#slide4:active ~ .slider__pagination label[for="slide4"] span,
+#slide5:active ~ .slider__pagination label[for="slide5"] span,
+#slide6:active ~ .slider__pagination label[for="slide6"] span {
+  background-color: rgba(0, 0, 0, 0.541);
   transform: scale(1.3);
 }
 
